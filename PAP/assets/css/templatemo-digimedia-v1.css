@@ -184,13 +184,13 @@ body {
 .section-heading h6 {
   font-size: 15px;
   font-weight: 700;
-  color: #726ae3;
+  color: hsl(320, 48%, 77%);
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
 .section-heading h4 {
-  color: #2a2a2a;
+  color: #ee9ecf;
   font-size: 35px;
   font-weight: 700;
   text-transform: capitalize;
@@ -199,13 +199,13 @@ body {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #726ae3;
+  color: hsl(202, 64%, 68%);
 }
 
 .section-heading .line-dec {
   width: 50px;
   height: 2px;
-  background-color: #726ae3;
+  background-color: hsl(320, 48%, 77%);
 }
 
 .border-first-button a {
