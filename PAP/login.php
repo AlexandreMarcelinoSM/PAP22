@@ -16,15 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 
     if(empty($error)){
         if($query = $db->prepare("SELECT * FROM equipa WHERE email = ?")){
-            $query->bind_param("s",$email);
+            $query->bind_param('s',$email);
             $query->execute();
             $row = $query->fetch();
             if($row){
-                if (password_verify($password, $row['password'])){
-                    $_SESSION["userid"] = $row['id_utilizador'];
-                    $_SESSION["user"] = $row;
+                if (password_verify($password, $row["password"])){
+                    
 
-                    header("location: index.html");
+                    header("location: index.php");
                     exit;
                 } else{
                     $error .= '<p class="error">A password não é válida.</p>';
@@ -55,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 </head>
 <body>
 
-    <form action="" method="POST">        
+    <form action="" method="post">        
         <div class="container"> 
             <img src="./assets/images/logo-v1.png" alt="avatar" class="avatar">            
             <center> <h1> LOGIN DE ACESSO </h1> </center> 
@@ -68,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
             <label>Password : </label> 
             <input type="password" placeholder="Escreva a sua password" name="password" class="form-control" required>
         </div>
-        <div class="form-group">
-           <input type="submit" name="submit" class="btn btn-primary" value="Entrar">
+        <div class="form-group">           
+           <button type="submit" name="submit">Entrar</button> 
 </div>
         
         </div> 
