@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
             $row = $query->fetch();
             if($row){
                 if (password_verify($password, $row["password"])){
-                    
+                    $_SESSION["userid"]= $row["id_utilizador"];
+                    $_SESSION["user"] = $row;
+
 
                     header("location: index.php");
                     exit;
@@ -69,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
         </div>
         <div class="form-group">           
            <button type="submit" name="submit">Entrar</button> 
-</div>
+        </div>
         
         </div> 
     </form>   
