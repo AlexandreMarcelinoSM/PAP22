@@ -5,7 +5,7 @@ $error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 
     $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
+    $password = trim($_POST['pass']);
 
     if(empty($email)){
         $error .= '<p class="error">Por favor escreva um email válido.</p>';
@@ -20,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
             $query->execute();
             $row = $query->fetch();
             if($row){
-                if (password_verify($password, $row["password"])){
-                    $_SESSION["userid"]= $row["id_utilizador"];
-                    $_SESSION["user"] = $row;
+                if (password_verify($password, $row["pass"])){
+                    // $_SESSION["userid"]= $row["id_utilizador"];
+                    // $_SESSION["user"] = $row;
 
 
                     header("location: index.php");
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
         </div>
         <div class="form-group">
             <label>Password : </label> 
-            <input type="password" placeholder="Escreva a sua password" name="password" class="form-control" required>
+            <input type="password" placeholder="Escreva a sua password" name="pass" class="form-control" required>
         </div>
         <div class="form-group">           
            <button type="submit" name="submit">Entrar</button> 

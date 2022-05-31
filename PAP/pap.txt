@@ -1,7 +1,2 @@
-
 https://dzone.com/articles/ceate-a-login-system-using-html-php-and-mysql
 https://www.youtube.com/watch?v=arqv2YVp_3E
-
-New Login
-https://codewithharry.com/videos/php-mysql-login-system-in-one-video
-https://www.youtube.com/watch?v=-al2bECumKg

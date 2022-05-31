@@ -1,7 +1,7 @@
 <?php
 include_once("db_connect.php");
 $sqlEvents = "SELECT id, title, start_date, end_date FROM events LIMIT 20";
-$resultset = mysqli_query($conn, $sqlEvents) or die("database error:". mysqli_error($conn));
+$resultset = mysqli_query($db, $sqlEvents) or die("database error:". mysqli_error($db));
 $calendar = array();
 while( $rows = mysqli_fetch_assoc($resultset) ) {	
 	// convert  date to milliseconds
