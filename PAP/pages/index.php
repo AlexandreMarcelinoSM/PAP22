@@ -6,7 +6,7 @@
 </head>
 <body>
      <form action="login.php" method="post">
-     	<h2>LOGIN</h2>
+     	<h2>TlimTlim</h2>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
@@ -16,7 +16,7 @@
      	<label>Password</label>
      	<input type="password" name="password" placeholder="Password"><br>
 
-     	<button type="submit">Login</button>
+     	<button type="submit">Entrar</button>
      </form>
 </body>
 </html>
