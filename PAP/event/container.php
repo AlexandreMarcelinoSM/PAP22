@@ -16,7 +16,10 @@
             <li class="active"><a>Consultas</a></li>
            
           </ul>
-         
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#" style="padding-left: 750px;">Registar Marcação</a></li>
+           
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
